@@ -1,0 +1,23 @@
+{
+  "name": "Logbook API",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+  "postCreateCommand": "pip install fastapi uvicorn psycopg2-binary sqlalchemy alembic python-dotenv",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "rangav.vscode-thunder-client",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+  "forwardPorts": [8000, 5432],
+  "remoteUser": "vscode"
+}
+
+
